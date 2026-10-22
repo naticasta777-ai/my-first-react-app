@@ -2,8 +2,9 @@ import { useTextos } from "./hooks/useTextos.js";
 import Navbar from "./components/Navbar";
 import './App.css'
 import { useEffect, useState } from "react";
+import Ejercicio10 from "./components/Ejercicio10.jsx";
 
-function leerSeccion(){
+function leerSeccion() {
     return window.location.hash.slice(1) || "inicio";
 }
 
@@ -21,12 +22,12 @@ function App() {
 
     // Va a sincronizar el estado el componente con el hash de la url
     useEffect(() => {
-        function actualizar(){
+        function actualizar() {
             setActivo(leerSeccion());
             setConsulta("");
         }
         window.addEventListener("hashchange", actualizar);
-        return ()=> window.removeEventListener("hashchange", actualizar);
+        return () => window.removeEventListener("hashchange", actualizar);
     }, []);
 
 
@@ -34,14 +35,14 @@ function App() {
         document.documentElement.lang;
     }, [idioma]);
 
-    useEffect(()=>{
+    useEffect(() => {
         document.documentElement.style.fontSize = textoGrande ? "112%" : "";
         return () => {
             document.documentElement.style.fontSize = "";
         };
-    },[textoGrande]);
+    }, [textoGrande]);
 
-    function buscar (valor){
+    function buscar(valor) {
         setConsulta(valor);
         setActivo("heroes");
         // window.history es el que da acceso al historial de la pestaña
@@ -49,18 +50,21 @@ function App() {
     }
 
     return (
-        <>        
-            <Navbar 
-                {...datos} 
-                idioma={idioma}
-                cambiarIdioma={setIdioma}
-                activo={activo}
-                onBuscar={buscar}
-                texto={textoGrande}
-                alternarTexto={() => setTextoGrande((valor) => !valor)}
-            />
+        /*     <>        
+                <Navbar 
+                    {...datos} 
+                    idioma={idioma}
+                    cambiarIdioma={setIdioma}
+                    activo={activo}
+                    onBuscar={buscar}
+                    texto={textoGrande}
+                    alternarTexto={() => setTextoGrande((valor) => !valor)}
+                />
+            </>
+      */
+        <>
+        <Ejercicio10 />
         </>
- 
     );
 }
 
