@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 const Ejercicio1 = () => {
-  return (
-    <div>Ejercicio1</div>
-  )
-}
+    const [nombre, setNombre] = useState('');
 
-export default Ejercicio1
+    function cambiarNombre() {
+        setNombre('Yaneth');
+    }
+
+    return (
+        <>
+            <button onClick={cambiarNombre}>Cambiar nombre</button>
+            <ul>
+                <li>Nombre: {nombre}</li>
+            </ul>
+        </>
+    );
+};
+
+export default Ejercicio1;
