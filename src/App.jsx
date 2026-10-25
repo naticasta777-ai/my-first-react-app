@@ -2,7 +2,12 @@ import { useTextos } from "./hooks/useTextos.js";
 import Navbar from "./components/Navbar";
 import './App.css'
 import { useEffect, useState } from "react";
+
+import Ejercicio2 from "./components/Ejercicio2.jsx";
+import Ejercicio4 from "./components/Ejercicio4.jsx";
+import Ejercicio6 from "./components/Ejercicio6.jsx";
 import Ejercicio10 from "./components/Ejercicio10.jsx";
+import Ejercicio8 from "./components/Ejercicio8.jsx";
 
 function leerSeccion() {
     return window.location.hash.slice(1) || "inicio";
@@ -62,9 +67,16 @@ function App() {
                 />
             </>
       */
+
+
         <>
         <Ejercicio10 />
+        <Ejercicio2 />
+        <Ejercicio4 />
+        <Ejercicio6 />
+        <Ejercicio8 />
         </>
+
     );
 }
 
