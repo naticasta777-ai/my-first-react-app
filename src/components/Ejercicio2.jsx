@@ -1,11 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Ejercicio2 = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+
+    const [ciudad, setCiudad] = useState("Manizales");
+
+    //funciones del ejercicio
+
+    function viajarABogota() {
+        setCiudad("Bogotá");
+    }
+
+    function volverACasa() {
+        setCiudad("Manizales");
+    }
+
+    return (
+        <>
+            <button onClick={viajarABogota}>Viajar a Bogotá</button>
+            <button onClick={volverACasa}>Volver a casa</button>
+            <ul>
+                <li>Ciudad actual: {ciudad}</li>
+            </ul>
+        </>
+    );
 }
 
 export default Ejercicio2
+
+
