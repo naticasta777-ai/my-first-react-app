@@ -28,3 +28,8 @@ button,
 input{
     font: inherit;
 }
+
+:focus-visible{
+    outline: 3px solid var(--color-foco);
+    outline-offset: 2px;
+}
