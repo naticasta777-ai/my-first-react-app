@@ -1,6 +1,6 @@
 // import { useTextos } from "./hooks/useTextos.js";
 // import Navbar from "./components/Navbar";
-// import './App.css'
+
 // import { useEffect, useState } from "react";
 
 // import Ejercicio2 from "./components/Ejercicio2.jsx";
@@ -84,16 +84,22 @@
 
 
 import React from 'react'
+import './App.css'
+
+
 
 export const App = () => {
   return (
-    <>
+    <div>
     <main className="pagina">
         <header className="pagina-encabezado">
             <h1>Taquilla</h1>
             <p>Crea tu cuenta o ingresa para comprar tus bolestas.</p>
         </header>
+        <div className='pagina-formularios'></div>
     </main>
-    </>
+    </div>
   )
 }
+
+export default App;
