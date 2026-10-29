@@ -1,3 +1,4 @@
+import './styles/index.css' 
 import { createRoot } from 'react-dom/client'
 import './styles/token.css'
 import './styles/global.css'
@@ -10,3 +11,4 @@ createRoot(document.getElementById('root')).render(
         <App />
     </StrictMode>,
 )
+
